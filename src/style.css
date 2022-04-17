@@ -1,0 +1,42 @@
+@font-face {
+    font-family: "square peg";
+    src: url("./SquarePeg-Regular.ttf");
+}
+
+html,
+body {
+    margin: 0px;
+    padding: 0px;
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+}
+
+.container {
+    background-image: url("../src/lily-banse--YHSwy6uqvk-unsplash.jpg");
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    color: white;
+}
+
+header {
+    height: 100px;
+    display: grid;
+    grid-template-columns: 1fr 5rem 1fr;
+    align-items: center;
+    justify-items: center;
+    font-size: min(10vw, 6rem);
+    font-family: "square peg";
+}
+
+#logo {
+    height: 5rem;
+    justify-self: center;
+}
+
+button {
+    border-style: none;
+    background-color: white;
+    font-size: clamp(1rem, 2vw, 20px);
+}
