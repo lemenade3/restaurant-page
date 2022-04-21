@@ -11,8 +11,8 @@ body {
     background-color: rgb(255, 255, 255);
 }
 
-.container {
-    background-image: url("../src/lily-banse--YHSwy6uqvk-unsplash.jpg");
+.background {
+    background-image: url("./lily-banse--YHSwy6uqvk-unsplash.jpg");
     background-size: cover;
     background-position: center;
     width: 100%;
@@ -44,7 +44,7 @@ button {
     font-size: clamp(1rem, 2vw, 20px);
 }
 
-.copywrite {
+.container {
     background-color: rgba(0, 0, 0, 0.5);
     height: 450px;
     width: 800px;

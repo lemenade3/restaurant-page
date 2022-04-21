@@ -30,21 +30,13 @@ function pageLoad() {
     header.append(logo);
     header.append(headerBtns);
 
+    const background = document.createElement('div');
+    background.setAttribute('class', 'background');
+
     const container = document.createElement('div');
     container.setAttribute('class', 'container');
 
-    const copywrite = document.createElement('div');
-    copywrite.setAttribute('class', 'copywrite');
-
-    const cwrite1 = document.createElement('h2');
-    cwrite1.textContent = "Delicious Bistro Style Food!";
-    const cwrite2 = document.createElement('div');
-    cwrite2.textContent = "Made with love";
-    const cwrite3 = document.createElement('div');
-    cwrite3.textContent = "Natural - Fresh - Homemade";
-
-    copywrite.append(cwrite1,cwrite2,cwrite3);
-    container.append(copywrite);
+    background.append(container);
 
     const footer = document.createElement('footer');
     const copyright = document.createElement('div');
@@ -52,7 +44,7 @@ function pageLoad() {
 
     footer.append(copyright);
 
-    content.append(header,container,footer);
+    content.append(header,background,footer);
 };
 
 export {pageLoad as default};
