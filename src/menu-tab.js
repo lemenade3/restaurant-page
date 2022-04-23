@@ -1,10 +1,11 @@
 function menuTabLoad() {
     const container = document.querySelector(".container")
 
-    const test = document.createElement('div')
-    test.textContent = "The Menu Module is Loading"
+    const menuTitle = document.createElement('h2');
+    menuTitle.textContent = "Our Nosh";
+    menuTitle.setAttribute('id', 'menuTitle');
 
-    container.append(test);
+    container.append(menuTitle);
 };
 
 export {menuTabLoad as default};

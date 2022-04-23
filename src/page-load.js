@@ -1,3 +1,6 @@
+/*Exports the pageLoad function to index.js to load the intial content of the page.
+Loads things such as Logos, background and basic container divs */
+
 import logoImg from './logo.svg';
 
 function pageLoad() {
@@ -40,15 +43,15 @@ function pageLoad() {
     const container = document.createElement('div');
     container.setAttribute('class', 'container');
 
-    background.append(container);
-
     const footer = document.createElement('footer');
     const copyright = document.createElement('div');
-    copyright.textContent = "Copyright: - Oliver Browning 2022"
+    copyright.textContent = "Copyright © - Oliver Browning 2022";
 
     footer.append(copyright);
 
-    content.append(header,background,footer);
+    background.append(container,footer);
+
+    content.append(header,background);
 };
 
 export {pageLoad as default};
