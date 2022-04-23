@@ -67,9 +67,10 @@ h3 {
 
 button {
     border-style: none;
-    background-color: white;
+    background-color: transparent;
     font-size: clamp(1rem, 2vw, 20px);
     cursor: pointer;
+    color: inherit;
 }
 
 .container {
@@ -107,4 +108,19 @@ footer {
     width: 100%;
     text-align: center;
     font-size: 3rem;
+}
+
+.menuContent {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+#menuButtons {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    border-style: solid;
+    border-color: white;
 }
