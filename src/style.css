@@ -43,7 +43,7 @@ h3 {
 }
 
 h2 {
-    font-size: 2.5rem;
+    font-size: 3rem;
 }
 
 h3 {
@@ -56,7 +56,8 @@ h3 {
 
 #para2,
 .opening,
-.bottom {
+.bottom,
+.content {
     text-align: center;
 }
 
@@ -103,12 +104,6 @@ footer {
 }
 
 /*Menu Styling*/
-
-#menuTitle {
-    width: 100%;
-    text-align: center;
-    font-size: 3rem;
-}
 
 .menuContent {
     display: grid;

@@ -3,7 +3,6 @@ function menuTabLoad() {
 
     const menuTitle = document.createElement('h2');
     menuTitle.textContent = "Our Nosh";
-    menuTitle.setAttribute('id', 'menuTitle');
 
     const menuButtons = document.createElement('div');
     menuButtons.setAttribute('id', 'menuButtons');
