@@ -1,4 +1,14 @@
+// Imports menu items from different menu modules and loads them dynamically.
+// Loads layout for Menu Page
+
+import loadStarters from './menu-tab-starters';
+import loadMains from './menu-tab-mains';
+import loadSides from './menu-tab-sides';
+import loadDesserts from './menu-tab-dessert';
+import loadDrinks from './menu-tab-drink';
+
 function menuTabLoad() {
+
     const container = document.querySelector(".container")
 
     const menuTitle = document.createElement('h2');
@@ -22,30 +32,38 @@ function menuTabLoad() {
     const menuContent = document.createElement('div');
     menuContent.setAttribute('class', 'menuContent')
 
-    const menuItem1 = document.createElement('div');
-    const menuItemTitle1 = document.createElement('div');
-    menuItemTitle1.textContent = "Example Title ~ £10.00";
-    const menuItemDescription1 = document.createElement('div');
-    menuItemDescription1.textContent = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec augue arcu, pellentesque eu pellentesque quis, ultrices eget velit. Sed maximus efficitur libero, nec scelerisque neque finibus sed";
-    menuItem1.append(menuItemTitle1,menuItemDescription1);
-
-    const menuItem2 = document.createElement('div');
-    const menuItemTitle2 = document.createElement('div');
-    menuItemTitle2.textContent = "Example Title ~ £20.00";
-    const menuItemDescription2 = document.createElement('div');
-    menuItemDescription2.textContent = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec augue arcu, pellentesque eu pellentesque quis, ultrices eget velit. Sed maximus efficitur libero, nec scelerisque neque finibus sed";
-    menuItem2.append(menuItemTitle2,menuItemDescription2);
-
-    const menuItem3 = document.createElement('div');
-    const menuItemTitle3 = document.createElement('div');
-    menuItemTitle3.textContent = "Example Title ~ £30.00";
-    const menuItemDescription3 = document.createElement('div');
-    menuItemDescription3.textContent = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec augue arcu, pellentesque eu pellentesque quis, ultrices eget velit. Sed maximus efficitur libero, nec scelerisque neque finibus sed";
-    menuItem3.append(menuItemTitle3,menuItemDescription3);
-
-    menuContent.append(menuItem1,menuItem2,menuItem3)
-
     container.append(menuTitle,menuButtons,menuContent);
+
+    loadStarters();
+
+    function clearMenu() {
+        menuContent.innerHTML = ""
+    };
+
+    starters.addEventListener('click', () => {
+        clearMenu();
+        loadStarters();
+    });
+
+    mains.addEventListener('click', () => {
+        clearMenu();
+        loadMains();
+    });
+
+    sides.addEventListener('click', () => {
+        clearMenu();
+        loadSides();
+    });
+
+    desserts.addEventListener('click', () => {
+        clearMenu();
+        loadDesserts();
+    });
+
+    drinks.addEventListener('click', () => {
+        clearMenu();
+        loadDrinks();
+    });
 };
 
 export {menuTabLoad as default};
