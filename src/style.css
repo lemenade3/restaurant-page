@@ -75,7 +75,7 @@ button {
 }
 
 .container {
-    height: calc(70vh);
+    height: 70vh;
     width: max(calc(100% - 400px), 350px);
     display: flex;
     flex-direction: column;
@@ -118,4 +118,61 @@ footer {
     margin-bottom: 20px;
     border-style: solid;
     border-color: white;
+}
+
+/* Contact Styling */
+
+.content {
+    display: flex;
+}
+
+form {
+    border-style: solid;
+    border-color: white;
+    border-radius: 20px;
+    padding: 20px;
+    width: calc(100% - 20vw);
+    margin-top: auto;
+    margin-bottom: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 30vh;
+}
+
+form > :first-child {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 10px;
+    column-gap: 20px;
+    height: clamp(250px, 80%, 600px);
+}
+
+form > button {
+    border-color: white;
+    border-radius: 10px;
+    border-style: solid;
+    height: 50px;
+    width: 120px;
+}
+
+.message {
+    grid-column: 2 / 3;
+    grid-row: 1 / 4;
+}
+
+input,
+textarea {
+    width: 20vw;
+    background-color: transparent;
+    border-color: white;
+    border-radius: 10px;
+    border-style: solid;
+    color: white;
+    padding: 4px;
+}
+
+textarea {
+    height: 80%;
 }

@@ -10,7 +10,7 @@ function pageLoad() {
     const header = document.createElement('header');
 
     const name = document.createElement('div')
-    name.textContent = 'Tasty Nosh'
+    name.textContent = 'The Dragonfly'
 
     const logo = new Image();
     logo.src = logoImg;
